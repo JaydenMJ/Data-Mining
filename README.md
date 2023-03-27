@@ -8,6 +8,9 @@ finance_yahoo_com(yahoo_finance_website): This class is used to extract the data
 * `check_YahooFinance_site()`: This function checks whether the browser is in Yahoo Finance page or not.
 * `search()`: This function searches the inputted stock code and, if found, goes to the required page.
 * `conversations()`: This function extracts and saves in a csv file the analysis of the conversations about the stock on the Yahoo Finance website.
+* `statistics()` : Search for Stock Price History, Share Statistics, Dividends data and to csv
+* `sustinfo()`: Search for Sustainability data
+
 
 
 Other libraries imported are:
@@ -56,40 +59,29 @@ This program uses selenium to extract financial data from Yahoo Finance. It also
 
 
 
-## This is a school based project for Web Scrapping using Selenium with OOP.
+## This is a school based project for Web Scrapping using Selenium with OOP
 
+1. `dataSummary`: allows users to extract the data summary page for the specified stock;
+2. `conversations`: allows users to extract the conversations page for the specified stock;
+3. `statistics`: allows users to extract the statistics page for the specified stock; and
+4. `sustinfo`: allows users to extract the sustainability page for the specified stock.
 
+In addition, there is a function to start the program, called userinterface.
 
-Parent Class is finance_yahoo_com(yahoo_finance_website)
+#### How to use
+After importing this class, create an object and run the function `userinterface()`. The program will display a menu for the user to select one of four options, as well as an option to exit the program. The options correspond to the four functions listed above. Once a function is selected, the program will extract the relevant data and save the output as a CSV file. The output file can then be found in the working directory.
 
-Functions inlcude:
-__init__(self,stocknum) 
-sname()
-It checks with the functions and stock/ETF entered, automate searching in Yahoo Finance Page.
+#### Example inputs and outputs
+For example, if the user inputs 0700 as the stock code, the output files will be named '0700_summary.csv', '0700_conversations.csv', '0700_statistics.csv', and '0700_sustainability.csv'.
 
-dataSummary(self,stocknum)
-It checks with css selector and xpath selector in html, creates dictionary for the data, convert the data in csv file for data summary page.
+If the user selects option `1`, the output file will contain the `data summary page` for the specified stock code.
 
-check_YahooFinance_site(self)
-It checks whether the driver successfully go to correct code page with destructor
+If the user selects option `2`, the output file will contain the `conversations page` for the specified stock code.
 
+If the user selects option `3`, the output file will contain the `statistics page` for the specified stock code.
 
-search(self)
-Display search results in flexible 
-Fix bugs for empty types for the stock entered
+If the user selects option `4`, the output file will contain the `sustainability page` for the specified stock code.
 
-conversations(self)
-Check with user comments and store them into dictionary according to time.
-Use Textblob for sentiments, polarity analysis on text.
-Use Pandas to transpose Dictionary to csv is data is found.
+If the user selects option `5`, they will be prompted to input another stock code.
 
-
-statistics(self)
-Search for Stock Price History, Share Statistics, Dividends data and to csv
-
-sustinfo(self,stocknum)
-Sustainability data
-
-userinterface(self)
-
-
+If the user selects option `6`, the program will end.
