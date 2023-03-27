@@ -60,7 +60,7 @@ This program uses selenium to extract financial data from Yahoo Finance. It also
 
 
 ## This is a school based project for Web Scrapping using Selenium with OOP
-
+## Interface
 1. `dataSummary`: allows users to extract the data summary page for the specified stock;
 2. `conversations`: allows users to extract the conversations page for the specified stock;
 3. `statistics`: allows users to extract the statistics page for the specified stock; and
