@@ -3,25 +3,25 @@ The code is using Selenium library and Yahoo Finance API to extract information 
 
 finance_yahoo_com(yahoo_finance_website): This class is used to extract the data. There are several functions in this class:
 
-sname(): Extract the code of the stock using xpath() method for further uses.
-dataSummary(stocknum): This function extracts the data for a given stock code and then saves it to a csv file.
-check_YahooFinance_site(): This function checks whether the browser is in Yahoo Finance page or not.
-search(): This function searches the inputted stock code and, if found, goes to the required page.
-conversations(): This function extracts and saves in a csv file the analysis of the conversations about the stock on the Yahoo Finance website.
+* `sname`(): Extract the code of the stock using xpath() method for further uses.
+* `dataSummary(stocknum)`: This function extracts the data for a given stock code and then saves it to a csv file.
+* `check_YahooFinance_site()`: This function checks whether the browser is in Yahoo Finance page or not.
+* `search()`: This function searches the inputted stock code and, if found, goes to the required page.
+* `conversations()`: This function extracts and saves in a csv file the analysis of the conversations about the stock on the Yahoo Finance website.
 
 
 Other libraries imported are:
 
-webdriver (Selenium): A tool that controls a web browser through Python programs to automate website testing.
-yahoo_finance_website: A Yahoo Finace API to get stock data.
-numpy: A Python library used for working with arrays.
-csv: A module that implements classes to read and write tabular data in CSV (Comma Separated Values) format.
-textblob: A Python library for processing textual data.
-time: A library that provides various time-related functions.
-datetime: A module supplied by Python that provides classes to work with dates and times.
-relativedelta: A class in dateutil module that is used to generate relative data.
-pandas: A software library for data manipulation and analysis.
-pytz: A Python module that is used to work with timezone information provided by the Olson Database.
+* `webdriver (Selenium)`: A tool that controls a web browser through Python programs to automate website testing.
+* `yahoo_finance_website`: A Yahoo Finace API to get stock data.
+* `numpy`: A Python library used for working with arrays.
+* `csv`: A module that implements classes to read and write tabular data in CSV (Comma Separated Values) format.
+* `textblob`: A Python library for processing textual data.
+* `time`: A library that provides various time-related functions.
+* `datetime`: A module supplied by Python that provides classes to work with dates and times.
+* `relativedelta`: A class in dateutil module that is used to generate relative data.
+* `pandas`: A software library for data manipulation and analysis.
+* `pytz`: A Python module that is used to work with timezone information provided by the Olson Database.
 
 
 ## Selenium with financial data on Yahoo Finance Documentation
