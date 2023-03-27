@@ -34,8 +34,12 @@ class finance_yahoo_com(yahoo_finance_website):
         self.width = 44
         self.option = {"1": 'Extract Summary Page', "2":'Extract Conversation Page', "3":'Extract Statistic Page', "4":'Extract Sustainability Page',"5":'Search for another stock code',"6":'Exit'}
 
-    
-    
+    # Extract the code of the stock using sname() for further uses
+    def sname(self):
+        stock=self.driver.find_element_by_css_selector("#quote-header-info > div.Mt\(15px\) > div.D\(ib\).Mt\(-5px\).Mend\(20px\).Maw\(56\%\)--tab768.Maw\(52\%\).Ov\(h\).smartphone_Maw\(85\%\).smartphone_Mend\(0px\) > div.D\(ib\) > h1").text
+        stock=stock.split('(')[1][:-1]
+        return stock
+
     def dataSummary(self,stocknum):
         self.driver.get(f"https://finance.yahoo.com/quote/{obj.sname()}")
         filename=self.stocknum.replace('.','')+'.csv'
@@ -476,11 +480,6 @@ class finance_yahoo_com(yahoo_finance_website):
                 csv_writer.writerow(sustinfo)
         return False
 
-    # Extract the code of the stock using sname() for further uses
-    def sname(self):
-        stock=self.driver.find_element_by_css_selector("#quote-header-info > div.Mt\(15px\) > div.D\(ib\).Mt\(-5px\).Mend\(20px\).Maw\(56\%\)--tab768.Maw\(52\%\).Ov\(h\).smartphone_Maw\(85\%\).smartphone_Mend\(0px\) > div.D\(ib\) > h1").text
-        stock=stock.split('(')[1][:-1]
-        return stock
 
     def userinterface(self):
         while not self.endProgram:
