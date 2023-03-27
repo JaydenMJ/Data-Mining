@@ -24,7 +24,7 @@ pandas: A software library for data manipulation and analysis.
 pytz: A Python module that is used to work with timezone information provided by the Olson Database.
 
 
-## selenium with financial data on Yahoo Finance Documentation
+## Selenium with financial data on Yahoo Finance Documentation
 
 This program uses selenium to extract financial data from Yahoo Finance. It also includes class inheritance, web scraping, and sentiment analysis.
 
@@ -53,13 +53,10 @@ This program uses selenium to extract financial data from Yahoo Finance. It also
 8. Define `conversations()` to extract users' comments' time, their sentiment polarity score, and create a csv file to save the data.
 9. Use `if __name__ == "__main__":` to run the program.
 
-##python
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 
 
-This is a school based project for Web Scrapping using Selenium with OOP.
+
+## This is a school based project for Web Scrapping using Selenium with OOP.
 
 
 
