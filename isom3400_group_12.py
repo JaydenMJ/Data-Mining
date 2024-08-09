@@ -1,11 +1,7 @@
 """
-@course: ISOM3400 L1
-@Group number: 12
-@Group member: MAN, Chee Yan (20690722)
+
 @Group member: MAN, Chun Kit (20600284)
-@Group member: NGUYEN, Le Cam Van (20519019)
-@Group member: SO, Hing Kiu (20688949)
-@Group member: TAM, Jessie Hoi Ying (20697990)
+
 """
 #%%
 from selenium import webdriver
